@@ -118,6 +118,7 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
+catkin_add_nosetests(test/rotate_robot_test.py)
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/robot_control.cpp
