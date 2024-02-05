@@ -58,6 +58,13 @@ class RobotControl():
 
         self.angular_speed_r = speed_deg * 3.14 / 180
         self.angle_r = angle_deg * 3.14 / 180
+
+        if self.angle_r < 0:
+            self.angle_r = self.angle_r * (-1)
+            
+        if self.angular_speed_r < 0:
+            self.angular_speed_r = self.angular_speed_r * (-1)
+
         return [self.angular_speed_r, self.angle_r]
 
     def rotate(self):
